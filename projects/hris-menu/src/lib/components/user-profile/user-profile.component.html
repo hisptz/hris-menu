@@ -1,1 +1,17 @@
-<p>user-profile works!</p>
+<div class="user-profile-container">
+    <div class="user-profile-content-block">
+        <div class="user-profile-logo">
+            {{userInfo?.abbreviatedName}}
+        </div>
+        <div class="user-profile-content">
+            <div class="user-profile-name">{{userInfo?.name}}</div>
+            <small class="user-profile-email">{{userInfo?.email}}</small>
+        </div>
+    </div>
+
+    <div class="user-profile-options">
+        <button mat-stroked-button>Profile</button>
+        <button mat-stroked-button>Sign out</button>
+    </div>
+
+</div>

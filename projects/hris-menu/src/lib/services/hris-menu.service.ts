@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { getAppUrl } from '../helpers/get-app-url.helper';
+import { abbreviate } from '../helpers/abbreviate.helper';
 
 @Injectable()
 export class HrisMenuService {
@@ -20,5 +21,12 @@ export class HrisMenuService {
     );
   }
 
-  getCurrentUser() {}
+  getCurrentUser() {
+    return this.httpClient.get(`${this.rootUrl}me`).pipe(
+      map((userInfo: any) => {
+        const name = `${userInfo.firstname} ${userInfo.surname}`;
+        return { ...userInfo, abbreviatedName: abbreviate(name), name };
+      })
+    );
+  }
 }

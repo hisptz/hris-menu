@@ -61,11 +61,14 @@
     z-index: 1000;
     top: 48px;
     right: 20px;
-    min-width: 200px;
-    min-height: 300px;
   }
 
   .apps-container {
     width: 350px;
+    height: 400px;
+  }
+
+  .user-profile-container {
+    min-width: 300px;
   }
 }

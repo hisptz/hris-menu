@@ -19,6 +19,7 @@ export class HrisMenuComponent implements OnInit {
     this.dropDownTypes = DropDownTypes;
 
     this.appList$ = this.menuService.getApps();
+    this.userInfo$ = this.menuService.getCurrentUser();
   }
 
   onSetDropDownType(e, dropDownType: string) {

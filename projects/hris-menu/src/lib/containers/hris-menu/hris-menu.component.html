@@ -10,19 +10,15 @@
             <mat-icon>apps</mat-icon>
         </a>
         <a class="user-profile-btn" matRipple (click)="onSetDropDownType($event, dropDownTypes.USER_PROFILE)">
-            RM
+            {{(userInfo$ | async)?.abbreviatedName}}
         </a>
         <mat-card appClickOutside (clickOutside)="onResetDropDownType()" class="user-profile-container"
             *ngIf="currentDropDownType === dropDownTypes.USER_PROFILE">
-            <mat-card-content>
-                <ngx-dhis2-user-profile></ngx-dhis2-user-profile>
-            </mat-card-content>
+            <ngx-dhis2-user-profile [userInfo]="userInfo$ | async"></ngx-dhis2-user-profile>
         </mat-card>
         <mat-card class="apps-container" appClickOutside (clickOutside)="onResetDropDownType()"
             *ngIf="currentDropDownType === dropDownTypes.APPS">
-            <mat-card-content>
-                <ngx-dhis2-app-list [appList]="appList$ | async"></ngx-dhis2-app-list>
-            </mat-card-content>
+            <ngx-dhis2-app-list [appList]="appList$ | async"></ngx-dhis2-app-list>
         </mat-card>
     </div>
 </div>
