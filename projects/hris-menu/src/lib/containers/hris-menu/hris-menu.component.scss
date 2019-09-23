@@ -59,13 +59,14 @@
   .apps-container {
     position: absolute;
     z-index: 1000;
-    top: 48px;
+    top: 52px;
     right: 20px;
+    border-radius: 2px;
   }
 
   .apps-container {
-    width: 350px;
-    height: 400px;
+    width: 320px;
+    max-height: 400px;
   }
 
   .user-profile-container {
