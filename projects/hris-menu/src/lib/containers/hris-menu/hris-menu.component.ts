@@ -13,13 +13,16 @@ export class HrisMenuComponent implements OnInit {
   dropDownTypes: any;
   appList$: Observable<any>;
   userInfo$: Observable<any>;
+  loading$: Observable<boolean>;
   constructor(private menuService: HrisMenuService) {}
 
   ngOnInit() {
     this.dropDownTypes = DropDownTypes;
+    this.menuService.init();
 
-    this.appList$ = this.menuService.getApps();
-    this.userInfo$ = this.menuService.getCurrentUser();
+    this.appList$ = this.menuService.appList();
+    this.userInfo$ = this.menuService.userInfo();
+    this.loading$ = this.menuService.loading();
   }
 
   onSetDropDownType(e, dropDownType: string) {

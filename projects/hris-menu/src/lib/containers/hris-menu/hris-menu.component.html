@@ -14,11 +14,12 @@
         </a>
         <mat-card appClickOutside (clickOutside)="onResetDropDownType()" class="user-profile-container"
             *ngIf="currentDropDownType === dropDownTypes.USER_PROFILE">
-            <ngx-dhis2-user-profile [userInfo]="userInfo$ | async"></ngx-dhis2-user-profile>
+            <ngx-dhis2-user-profile [userInfo]="userInfo$ | async" [loading]="loading$ | async">
+            </ngx-dhis2-user-profile>
         </mat-card>
         <mat-card class="apps-container" appClickOutside (clickOutside)="onResetDropDownType()"
             *ngIf="currentDropDownType === dropDownTypes.APPS">
-            <ngx-dhis2-app-list [appList]="appList$ | async"></ngx-dhis2-app-list>
+            <ngx-dhis2-app-list [appList]="appList$ | async" [loading]="loading$ | async"></ngx-dhis2-app-list>
         </mat-card>
     </div>
 </div>

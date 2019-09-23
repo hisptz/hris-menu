@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UserProfileComponent implements OnInit {
   @Input() userInfo: any;
+  @Input() loading: boolean;
   constructor() {}
 
   ngOnInit() {}

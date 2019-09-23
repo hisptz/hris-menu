@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AppListComponent implements OnInit {
   @Input() appList: any[];
+  @Input() loading: boolean;
   constructor() {}
 
   ngOnInit() {}
