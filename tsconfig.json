@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "hris-menu": [
+        "dist/hris-menu"
+      ],
+      "hris-menu/*": [
+        "dist/hris-menu/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

@@ -124,6 +124,41 @@
           }
         }
       }
+    },
+    "hris-menu": {
+      "projectType": "library",
+      "root": "projects/hris-menu",
+      "sourceRoot": "projects/hris-menu/src",
+      "prefix": "ngx-dhis2",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/hris-menu/tsconfig.lib.json",
+            "project": "projects/hris-menu/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/hris-menu/src/test.ts",
+            "tsConfig": "projects/hris-menu/tsconfig.spec.json",
+            "karmaConfig": "projects/hris-menu/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/hris-menu/tsconfig.lib.json",
+              "projects/hris-menu/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "hris-menu-module"
 }
