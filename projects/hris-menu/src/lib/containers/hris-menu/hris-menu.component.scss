@@ -1,0 +1,57 @@
+.hris-menu-container {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  height: 50px;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.05),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.05),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.05),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+
+  .left-header {
+    display: flex;
+    align-items: center;
+    .hris-header {
+      font-size: 19px;
+      font-weight: 500;
+    }
+
+    .hris-logo {
+      margin-right: 10px;
+      text-decoration: none;
+      img {
+        height: 40px;
+      }
+    }
+  }
+
+  .right-header {
+    display: flex;
+    align-items: center;
+    .apps-btn {
+      margin-right: 15px;
+      display: flex;
+      cursor: pointer;
+    }
+    .user-profile {
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: #dddddd;
+      cursor: pointer;
+    }
+  }
+}
