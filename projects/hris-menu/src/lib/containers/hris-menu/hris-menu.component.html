@@ -6,11 +6,23 @@
         </div>
     </div>
     <div class="right-header">
-        <a class="apps-btn" matRipple>
+        <a class="apps-btn" matRipple (click)="onSetDropDownType($event, dropDownTypes.APPS)">
             <mat-icon>apps</mat-icon>
         </a>
-        <a class="user-profile" matRipple>
+        <a class="user-profile-btn" matRipple (click)="onSetDropDownType($event, dropDownTypes.USER_PROFILE)">
             RM
         </a>
+        <mat-card appClickOutside (clickOutside)="onResetDropDownType()" class="user-profile-container"
+            *ngIf="currentDropDownType === dropDownTypes.USER_PROFILE">
+            <mat-card-content>
+                <ngx-dhis2-user-profile></ngx-dhis2-user-profile>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="apps-container" appClickOutside (clickOutside)="onResetDropDownType()"
+            *ngIf="currentDropDownType === dropDownTypes.APPS">
+            <mat-card-content>
+                <ngx-dhis2-app-list [appList]="appList$ | async"></ngx-dhis2-app-list>
+            </mat-card-content>
+        </mat-card>
     </div>
 </div>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HrisMenuService } from '../../services/hris-menu.service';
+import { DropDownTypes } from '../../constants/dropdown.constant';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'ngx-dhis2-hris-menu',
@@ -6,7 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hris-menu.component.scss']
 })
 export class HrisMenuComponent implements OnInit {
-  constructor() {}
+  currentDropDownType: any;
+  dropDownTypes: any;
+  appList$: Observable<any>;
+  userInfo$: Observable<any>;
+  constructor(private menuService: HrisMenuService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.dropDownTypes = DropDownTypes;
+
+    this.appList$ = this.menuService.getApps();
+  }
+
+  onSetDropDownType(e, dropDownType: string) {
+    e.stopPropagation();
+    this.currentDropDownType = dropDownType;
+  }
+
+  onResetDropDownType() {
+    this.currentDropDownType = undefined;
+  }
 }
