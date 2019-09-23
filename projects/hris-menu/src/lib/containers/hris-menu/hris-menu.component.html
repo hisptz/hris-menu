@@ -1,3 +1,25 @@
-<p>
-    hris-menu works!
-</p>
+<div class="hris-menu-container">
+    <div class="left-header">
+        <a href="#" class="hris-logo" matRipple> <img [src]="appLogo" alt=""></a>
+        <div class="hris-header">
+            HRHIS
+        </div>
+    </div>
+    <div class="right-header">
+        <a class="apps-btn" matRipple (click)="onSetDropDownType($event, dropDownTypes.APPS)">
+            <mat-icon>apps</mat-icon>
+        </a>
+        <a class="user-profile-btn" matRipple (click)="onSetDropDownType($event, dropDownTypes.USER_PROFILE)">
+            {{(userInfo$ | async)?.abbreviatedName}}
+        </a>
+        <mat-card appClickOutside (clickOutside)="onResetDropDownType()" class="user-profile-container"
+            *ngIf="currentDropDownType === dropDownTypes.USER_PROFILE">
+            <ngx-dhis2-user-profile [userInfo]="userInfo$ | async" [loading]="loading$ | async">
+            </ngx-dhis2-user-profile>
+        </mat-card>
+        <mat-card class="apps-container" appClickOutside (clickOutside)="onResetDropDownType()"
+            *ngIf="currentDropDownType === dropDownTypes.APPS">
+            <ngx-dhis2-app-list [appList]="appList$ | async" [loading]="loading$ | async"></ngx-dhis2-app-list>
+        </mat-card>
+    </div>
+</div>
