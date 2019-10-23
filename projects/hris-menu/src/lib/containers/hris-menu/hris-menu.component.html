@@ -14,12 +14,12 @@
         </a>
         <mat-card appClickOutside (clickOutside)="onResetDropDownType()" class="user-profile-container"
             *ngIf="currentDropDownType === dropDownTypes.USER_PROFILE">
-            <ngx-hris-user-profile [userInfo]="userInfo$ | async" [loading]="loading$ | async">
-            </ngx-hris-user-profile>
+            <hris-user-profile [userInfo]="userInfo$ | async" [loading]="loading$ | async">
+            </hris-user-profile>
         </mat-card>
         <mat-card class="apps-container" appClickOutside (clickOutside)="onResetDropDownType()"
             *ngIf="currentDropDownType === dropDownTypes.APPS">
-            <ngx-hris-app-list [appList]="appList$ | async" [loading]="loading$ | async"></ngx-hris-app-list>
+            <hris-app-list [appList]="appList$ | async" [loading]="loading$ | async"></hris-app-list>
         </mat-card>
     </div>
 </div>

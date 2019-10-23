@@ -124,7 +124,7 @@
       "projectType": "library",
       "root": "projects/hris-menu",
       "sourceRoot": "projects/hris-menu/src",
-      "prefix": "ngx-hris",
+      "prefix": "hris",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

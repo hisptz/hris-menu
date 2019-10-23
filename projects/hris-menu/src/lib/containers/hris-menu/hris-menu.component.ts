@@ -4,7 +4,7 @@ import { DropDownTypes } from '../../constants/dropdown.constant';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'ngx-hris-menu',
+  selector: 'hris-menu',
   templateUrl: 'hris-menu.component.html',
   styleUrls: ['./hris-menu.component.scss']
 })

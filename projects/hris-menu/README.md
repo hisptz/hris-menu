@@ -4,7 +4,7 @@ Menu module for hris applications based on angular 8+
 
 ## installation
 
-`npm install @iapps/ngx-hris-menu --save`
+`npm install @iapps/hris-menu --save`
 
 ## Usage
 
@@ -36,4 +36,4 @@ BrowserAnimationsModule,
 
 Once imported, menu can be called in as
 
-`<ngx-hris-menu></ngx-hris-menu>`
+`<hris-menu></hris-menu>`
