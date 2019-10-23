@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'ngx-dhis2-app-list',
+  selector: 'ngx-hris-app-list',
   templateUrl: './app-list.component.html',
   styleUrls: ['./app-list.component.scss']
 })

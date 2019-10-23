@@ -55,6 +55,7 @@ export class HrisMenuService {
           return {
             ...app,
             url: getAppUrl(app),
+            abbreviatedName: abbreviate(app.name),
             displayName: startCase(app.name)
           };
         })
