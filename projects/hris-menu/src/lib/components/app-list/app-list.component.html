@@ -6,10 +6,11 @@
     <!-- end of loading block -->
     <!-- app list -->
     <ul class="app-list">
-        <li *ngFor="let app of appList; let i = index">
+        <li class="app-list-item" *ngFor="let app of appList; let i = index">
             <a [href]="app.url" [attr.tabindex]="i+1" matRipple>
                 <div class="app-item">
-                    <div class="app-icon">&nbsp;</div>
+                    <div class="app-icon" *ngIf="app.appicon === ''">{{app.displayName}}</div>
+                    <img [src]="app.appicon" class="app-img" alt="" *ngIf="app.appicon !== ''">
                     <div class="app-name">{{app.displayName}}</div>
                 </div>
             </a>

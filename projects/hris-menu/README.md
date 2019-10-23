@@ -1,24 +1,39 @@
-# HrisMenu
+# HRIS Menu
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.7.
+Menu module for hris applications based on angular 8+
 
-## Code scaffolding
+## installation
 
-Run `ng generate component component-name --project hris-menu` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project hris-menu`.
-> Note: Don't forget to add `--project hris-menu` or else it will be added to the default project in your `angular.json` file. 
+`npm install @iapps/hris-menu --save`
 
-## Build
+## Usage
 
-Run `ng build hris-menu` to build the project. The build artifacts will be stored in the `dist/` directory.
+If the module is to be imported in the app.module, then import as
 
-## Publishing
+import { HrisMenuModule } from '@iapps/ngx-hris-menu';
 
-After building your library with `ng build hris-menu`, go to the dist folder `cd dist/hris-menu` and run `npm publish`.
+then add this in the imports
 
-## Running unit tests
+```typescript
+imports: [
+...
+HrisMenuModule,
+...
+]
+```
 
-Run `ng test hris-menu` to execute the unit tests via [Karma](https://karma-runner.github.io).
+> Note: Menu component make a use of animations from angular, in this case you have to import BrowserAnimationsModule in app.module.ts
 
-## Further help
+`import { BrowserAnimationsModule } from '@angular/platform-browser/animations'`;
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```typescript
+imports: [
+...
+BrowserAnimationsModule,
+...
+]
+```
+
+Once imported, menu can be called in as
+
+`<hris-menu></hris-menu>`
