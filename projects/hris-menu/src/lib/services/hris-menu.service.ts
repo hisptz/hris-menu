@@ -65,7 +65,7 @@ export class HrisMenuService {
   getCurrentUser() {
     return this.httpClient.get(`${this.rootUrl}me`).pipe(
       map((userInfo: any) => {
-        const name = `${userInfo.firstname} ${userInfo.surname}`;
+        const name = `${userInfo.firstName} ${userInfo.surname}`;
         return { ...userInfo, abbreviatedName: abbreviate(name), name };
       })
     );
