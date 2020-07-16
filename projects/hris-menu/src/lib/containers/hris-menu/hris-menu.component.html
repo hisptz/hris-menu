@@ -10,7 +10,8 @@
             <mat-icon>search</mat-icon>
         </a>
         <a class="apps-search" (click)="onSetDropDownType($event, dropDownTypes.APPS)">
-            <input matInput class="apps-search-input" type="text" value="" placeholder="Search Apps" />
+            <input matInput class="apps-search-input" type="text" value="" placeholder="Search Apps"
+                [(ngModel)]="searchKeyword" />
         </a>
         <a class="apps-btn" matRipple (click)="onSetDropDownType($event, dropDownTypes.APPS)">
             <mat-icon>apps</mat-icon>
@@ -25,7 +26,8 @@
         </mat-card>
         <mat-card class="apps-container" appClickOutside (clickOutside)="onResetDropDownType()"
             *ngIf="currentDropDownType === dropDownTypes.APPS">
-            <hris-app-list [appList]="appList$ | async" [loading]="loading$ | async"></hris-app-list>
+            <hris-app-list [appList]="appList$ | async | searchByName : searchKeyword" [loading]="loading$ | async">
+            </hris-app-list>
         </mat-card>
     </div>
 </div>

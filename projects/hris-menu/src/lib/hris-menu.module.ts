@@ -11,15 +11,19 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { CommonModule } from '@angular/common';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { AppListComponent } from './components/app-list/app-list.component';
+import { FormsModule } from '@angular/forms';
+import { SearchByNamePipe } from './pipes/search-by-name.pipe';
 @NgModule({
   declarations: [
     HrisMenuComponent,
     UserProfileComponent,
     ClickOutsideDirective,
-    AppListComponent
+    AppListComponent,
+    SearchByNamePipe
   ],
   imports: [
     CommonModule,
+    FormsModule,
     MatIconModule,
     MatRippleModule,
     MatCardModule,

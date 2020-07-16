@@ -15,6 +15,7 @@ export class HrisMenuComponent implements OnInit {
   appList$: Observable<any>;
   userInfo$: Observable<any>;
   loading$: Observable<boolean>;
+  searchKeyword: string;
   appLogo: string;
   constructor(private menuService: HrisMenuService) {}
 
