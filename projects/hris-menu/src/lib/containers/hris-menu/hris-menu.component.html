@@ -1,16 +1,22 @@
 <div class="hris-menu-container">
     <div class="left-header">
-        <a href="#" class="hris-logo" matRipple> <img [src]="appLogo" alt=""></a>
+        <a href="#" class="hris-logo" matRipple> <img [src]="appLogo" alt="" /></a>
         <div class="hris-header">
             HRHIS
         </div>
     </div>
     <div class="right-header">
+        <a class="apps-search-icon">
+            <mat-icon>search</mat-icon>
+        </a>
+        <a class="apps-search" (click)="onSetDropDownType($event, dropDownTypes.APPS)">
+            <input matInput class="apps-search-input" type="text" value="" placeholder="Search Apps" />
+        </a>
         <a class="apps-btn" matRipple (click)="onSetDropDownType($event, dropDownTypes.APPS)">
             <mat-icon>apps</mat-icon>
         </a>
         <a class="user-profile-btn" matRipple (click)="onSetDropDownType($event, dropDownTypes.USER_PROFILE)">
-            {{(userInfo$ | async)?.abbreviatedName}}
+            {{ (userInfo$ | async)?.abbreviatedName }}
         </a>
         <mat-card appClickOutside (clickOutside)="onResetDropDownType()" class="user-profile-container"
             *ngIf="currentDropDownType === dropDownTypes.USER_PROFILE">

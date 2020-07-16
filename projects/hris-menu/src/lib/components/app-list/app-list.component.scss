@@ -7,10 +7,15 @@
     flex-wrap: wrap;
     overflow: auto;
     max-height: 400px;
+
+    .app-container {
+      padding: 10px;
+      margin: 5px;
+    }
   }
 
   a {
-    width: 84px;
+    width: 100px;
     border-radius: 2px;
     text-decoration: none;
     display: flex;
@@ -19,6 +24,7 @@
     margin: 5px;
     padding: 7px;
     color: #222;
+    text-align: center;
 
     .app-item {
       text-align: center;

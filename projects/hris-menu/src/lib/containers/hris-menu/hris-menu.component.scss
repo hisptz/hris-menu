@@ -43,6 +43,28 @@
       display: flex;
       cursor: pointer;
     }
+    .apps-search-icon {
+      margin-right: 15px;
+      display: flex;
+      cursor: pointer;
+    }
+    .apps-search {
+      margin-right: 15px;
+      display: flex;
+      cursor: pointer;
+      outline: none !important;
+    }
+
+    .apps-search-input {
+      outline: 0;
+      border-width: 0 0 2px;
+      border-color: gray;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      font-size: 16px;
+      width: 312px !important;
+      margin: 0px;
+    }
     .user-profile-btn {
       height: 40px;
       width: 40px;
@@ -65,7 +87,7 @@
   }
 
   .apps-container {
-    width: 350px;
+    width: 400px;
     padding: 5px;
     max-height: 400px;
   }

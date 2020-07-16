@@ -6,6 +6,7 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { CommonModule } from '@angular/common';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
@@ -23,7 +24,8 @@ import { AppListComponent } from './components/app-list/app-list.component';
     MatRippleModule,
     MatCardModule,
     MatButtonModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatFormFieldModule
   ],
   exports: [HrisMenuComponent],
   providers: [HrisMenuService]

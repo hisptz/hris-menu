@@ -7,7 +7,7 @@
     <!-- app list -->
     <ul class="app-list">
         <li class="app-list-item" *ngFor="let app of appList; let i = index">
-            <a [href]="app.url" [attr.tabindex]="i+1" matRipple>
+            <a class="app-container" [href]="app.url" [attr.tabindex]="i+1" matRipple>
                 <div class="app-item">
                     <div class="app-icon" *ngIf="app.appicon === ''">{{app.displayName}}</div>
                     <img [src]="app.appicon" class="app-img" alt="" *ngIf="app.appicon !== ''">
