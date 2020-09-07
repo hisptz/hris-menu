@@ -13,7 +13,7 @@ export class UserProfileComponent implements OnInit {
   private rootUrl: string
   private route: Router
   constructor(private service: HrisMenuService) {
-    this.rootUrl = '/api/';
+    this.rootUrl = '/';
   }
 
   ngOnInit() {
@@ -22,7 +22,7 @@ export class UserProfileComponent implements OnInit {
   onlogOut() {
     localStorage.clear();
     this.service.logout().subscribe((s) => {
-      window.location.href = `${this.rootUrl}login`
+      window.location.href = `${this.rootUrl}`
     });
   }
 }
