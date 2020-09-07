@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HrisMenuService } from '../../services/hris-menu.service';
 
 @Component({
@@ -10,19 +10,14 @@ import { HrisMenuService } from '../../services/hris-menu.service';
 export class UserProfileComponent implements OnInit {
   @Input() userInfo: any;
   @Input() loading: boolean;
-  private rootUrl: string
-  private route: Router
-  constructor(private service: HrisMenuService) {
-    this.rootUrl = '/';
-  }
+  constructor(private service: HrisMenuService) {}
 
   ngOnInit() {
-    //console.log(this.userInfo)
   }
   onlogOut() {
     localStorage.clear();
     this.service.logout().subscribe((s) => {
-      window.location.href = `${this.rootUrl}`
+      window.location.href = '/';
     });
   }
 }
