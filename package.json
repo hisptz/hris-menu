@@ -1,6 +1,6 @@
 {
-  "name": "hris-menu_1",
-  "version": "1.0.0-alpha.6",
+  "name": "hris-menu",
+  "version": "1.0.0-alpha.7",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
