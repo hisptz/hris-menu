@@ -1,6 +1,6 @@
 {
   "name": "@iapps/hris-menu",
-  "version": "1.0.0-alpha.7",
+  "version": "1.0.0-alpha.8",
   "peerDependencies": {
     "@angular/common": "^8.2.7",
     "@angular/core": "^8.2.7",
