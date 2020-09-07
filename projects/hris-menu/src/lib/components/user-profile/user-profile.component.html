@@ -11,11 +11,13 @@
         <div class="user-profile-content">
             <div class="user-profile-name">{{userInfo?.name}}</div>
             <small class="user-profile-email">{{userInfo?.email}}</small>
+            <small class="user-profile-email">{{userInfo?.phoneNumber}}</small>
+
         </div>
     </div>
 
     <div class="user-profile-options" *ngIf="userInfo">
-        <button mat-stroked-button>Profile</button>
-        <button mat-stroked-button>Sign out</button>
+        <button mat-stroked-button >Profile</button>
+        <button mat-stroked-button (click) = "onlogOut()">Sign out</button>
     </div>
 </div>

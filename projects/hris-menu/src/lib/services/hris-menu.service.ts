@@ -94,4 +94,8 @@ export class HrisMenuService {
       map((menuState: MenuState) => menuState.error)
     );
   }
+  logout(){
+    const url = `${this.rootUrl}logout`
+   return this.httpClient.get(url)
+  }
 }
