@@ -12,7 +12,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular-devkit/build-angular": "0.803.25",
     "@angular/animations": "~8.2.7",
